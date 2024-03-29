@@ -1,9 +1,13 @@
-import styles from "./styles.module.css";
+import Footer from "./component/footer";
+import Header from "./component/header";
+import Hero from "./component/hero";
 
 export default function Home() {
   return (
-    <main
-      className={`flex ${styles.background} bg-cover bg-center min-h-screen`}
-    ></main>
+    <>
+      <Header />
+      <Hero />
+      <Footer />
+    </>
   );
 }

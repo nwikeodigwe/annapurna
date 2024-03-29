@@ -8,6 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        gloria: ["var(--font-gloria-hallelujah)"],
+      },
+      colors: {
+        brand: {
+          50: "#fff3db",
+          100: "#ffdfaf",
+          200: "#fdc980",
+          300: "#fab44f",
+          400: "#f99e1f",
+          500: "#e08506",
+          600: "#ae6702",
+          700: "#7d4a00",
+          800: "#4d2b00",
+          900: "#1e0e00",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
