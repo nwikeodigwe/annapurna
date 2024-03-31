@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "@next/font/google";
+import { Short_Stack as Sans } from "next/font/google";
 
 import "./globals.css";
+import "./style.css";
 
-const inter = Inter({
+const sans = Sans({
   subsets: ["latin"],
+  variable: "--font-nuecha",
   weight: ["400"],
-  variable: "--font-kalam",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sans.className} bg-brand-50`}>
       <body>{children}</body>
     </html>
   );

@@ -9,19 +9,19 @@ import Image from "next/image";
 
 const navLinks = [
   {
-    href: "#home",
+    href: "/",
     title: "Home",
   },
   {
-    href: "#whoweare",
+    href: "/who-we-are",
     title: "Who We Are",
   },
   {
-    href: "#location",
+    href: "/location",
     title: "Location",
   },
   {
-    href: "#contact",
+    href: "/contact",
     title: "Contact",
   },
 ];
@@ -109,7 +109,7 @@ export default function Header() {
   console.log(isOpen);
   return (
     <>
-      <header className="py-5 font-mono text-sm static top-0 left-0">
+      <header className="py-5 font-mono text-sm static top-0 left-0 bg-brand-50">
         <div className="flex px-10 items-center justify-between">
           <motion.div variants={logo_variant} initial="hidden" animate="show">
             <Image src={logo} alt="logo" className="w-36 h-16" />
@@ -120,9 +120,9 @@ export default function Header() {
               onClick={() => setIsOpen(true)}
             />
           </div>
-          <div className="hidden md:flex items-center gap-12 mono">
+          <div className="hidden md:flex items-center gap-12">
             <motion.ul
-              className="gap-12 list-none text-xl hidden md:flex items-center"
+              className="gap-12 list-none text-xl hidden md:flex items-center font-title"
               variants={container}
               initial="hidden"
               animate="show"
@@ -148,15 +148,17 @@ export default function Header() {
               ))}
             </motion.ul>
 
-            <motion.button
-              className="border-[1px] border-brand-500 font-title text-brand-500 px-5 py-3 rounded-sm"
-              variants={button}
-              initial="hidden"
-              animate="show"
-              whileHover="hover"
-            >
-              Make Reservation
-            </motion.button>
+            <Link href={"/make-reservation"}>
+              <motion.button
+                className="border-[1px] border-brand-500 font-title text-brand-500 px-5 py-3 rounded-sm"
+                variants={button}
+                initial="hidden"
+                animate="show"
+                whileHover="hover"
+              >
+                Make Reservation
+              </motion.button>
+            </Link>
           </div>
         </div>
       </header>

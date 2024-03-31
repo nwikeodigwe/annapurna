@@ -50,7 +50,7 @@ export default function Footer() {
           <Image src={logo} alt="logo" className="w-40 h-24" />
         </div>
         <div>
-          <ul className="flex justify-between uppercase text-md">
+          <ul className="flex justify-between uppercase text-md font-title font-bold">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href}>{link.title}</Link>

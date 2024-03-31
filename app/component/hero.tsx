@@ -1,7 +1,8 @@
 "use client";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import Header from "./header";
+import Image from "next/image";
+import illustration from "@/public/images/illustration/DrawKit-cooking-kitchen-food-vector-illustrations-15-removebg-preview.png";
 
 const container = {
   hidden: {
@@ -53,43 +54,46 @@ const button = {
 
 export default function Hero() {
   return (
-    <section className="h-3/4 md:h-screen flex flex-col md:justify-center p-10 md:p-0">
+    <section className="h-3/4 md:h-screen flex flex-col md:justify-center p-10 md:p-0 bg-gradient-to-bl from-brand-400 to-brand-200 backdrop-blur-lg relative">
+      <div className="absolute top-0 right-16">
+        <Image src={illustration} alt="logo" className="" />
+      </div>
       <motion.div
-        className="container flex flex-col mx-auto gap-2"
+        className="container flex flex-col mx-auto gap-4"
         variants={container}
         initial="hidden"
         animate="show"
       >
         <motion.p
-          className="md:tracking-wide text-sm md:text-md font-mono text-md text-brand-500"
+          className="md:tracking-wide text-sm md:text-md text-md text-brand-700"
           variants={children}
         >
-          Hi, my name is
+          Why people choose us as their go to?
         </motion.p>
         <motion.h1
-          className="text-4xl md:text-7xl font-bold text-gray-100"
+          className="text-4xl md:text-3xl font-title font-bold text-zinc-100"
           variants={children}
         >
-          Nwike Odigwe.
+          Prepare for first-class service
         </motion.h1>
         <motion.h2
-          className="text-4xl md:text-7xl text-gray-300 font-sans font-bold"
+          className="text-4xl md:text-2xl text-zinc-100 font-title font-bold md:w-2/3"
           variants={children}
         >
-          I build things for the web
+          Annapurna is the perfect place to order all your favourite Indian food
         </motion.h2>
         <motion.p
-          className="text-sm md:text-2xl text-gray-300 md:w-2/3 font-kalam"
+          className="text-sm md:text-md text-zinc-100 md:w-2/3"
           variants={children}
         >
-          I am a software engineer specializing in building (and occasionally
-          desingning) exceptional digital Experiences. Currently, I am focused
-          on building accessible, human-centered products
+          Here at Sharma, we ensure quality, customer satisfaction and variety;
+          providing a range of Indian cuisine as well as a range of Arabic
+          cuisine
         </motion.p>
         <div>
           <Link href="mailto:nwikeodigwe@outlook.com">
             <motion.button
-              className="border-[1px] border-brand-400 font-mono text-brand-400 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm"
+              className="border-[1px] border-brand-700 font-title text-brand-700 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm"
               variants={button}
               initial="hidden"
               animate="show"
@@ -99,7 +103,7 @@ export default function Hero() {
               }}
               whileTap={{ scale: 0.9 }}
             >
-              Get In Touch!
+              View Menu
             </motion.button>
           </Link>
         </div>

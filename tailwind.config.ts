@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        gloria: ["var(--font-gloria-hallelujah)"],
+        title: ["Gloria Hallelujah", ...defaultTheme.fontFamily.sans],
+        sans: ["Neucha", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         brand: {
