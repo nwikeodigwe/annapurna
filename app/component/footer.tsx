@@ -33,7 +33,7 @@ export default function Footer() {
   return (
     <footer className={style.background}>
       <div className="container flex flex-col gap-14 relative mx-auto text-white p-12">
-        <div className="absolute top-10 right-10">
+        <div className="absolute top-10 right-16">
           <ul className="flex gap-4">
             <li>
               <Link href="">
@@ -50,8 +50,8 @@ export default function Footer() {
         <div className="flex justify-center">
           <Image src={logo} alt="logo" className="w-40 h-24" />
         </div>
-        <div>
-          <ul className="flex justify-between uppercase text-md font-title font-bold">
+        <div className="flex justify-center">
+          <ul className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-between uppercase text-md font-title font-bold">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href}>{link.title}</Link>
@@ -60,12 +60,11 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <ul className="flex gap-5 text-md justify-center">
-            <li>
-              <Link href="/terms">Terms & Conditions</Link>
+          <ul className="grid grid-cols-2 items-center gap-5 text-md justify-between md:w-1/2 mx-auto">
+            <li className="border-r-2 border-white">
+              <Link href="/#">Terms & Conditions</Link>
             </li>
-            <li>|</li>
-            <li>
+            <li className="flex justify-end">
               <Link href="#">Privacy Policies</Link>
             </li>
           </ul>

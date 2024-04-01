@@ -8,8 +8,8 @@ import Image from "next/image";
 export default function MenuContent() {
   return (
     <section className="my-28">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-3 justify-center">
+      <div className="container mx-auto px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-center">
           <div>
             <Image src={menuOne} alt="menuOne" />
           </div>
@@ -22,7 +22,7 @@ export default function MenuContent() {
           <div>
             <Image src={menuFour} alt="menuFour" />
           </div>
-          <div className="col-span-2 flex justify-center">
+          <div className="md:col-span-2 flex justify-center">
             <Image src={menuFive} alt="menuFive" />
           </div>
         </div>

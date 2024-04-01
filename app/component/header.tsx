@@ -112,7 +112,9 @@ export default function Header() {
       <header className="py-5 font-mono text-sm static top-0 left-0 bg-brand-50">
         <div className="flex px-10 items-center justify-between">
           <motion.div variants={logo_variant} initial="hidden" animate="show">
-            <Image src={logo} alt="logo" className="w-36 h-16" />
+            <Link href={"/"}>
+              <Image src={logo} alt="logo" className="w-36 h-16" />
+            </Link>
           </motion.div>
           <div>
             <HiOutlineMenuAlt1
@@ -165,11 +167,11 @@ export default function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed flex justify-end w-full h-full top-0 backdrop-blur-sm overflow-hidden"
+            className="fixed flex justify-end w-full h-full top-0 backdrop-blur-sm overflow-hidden z-10"
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              className="bg-secondary-900 h-full w-[80%] flex flex-col justify-between p-10"
+              className="bg-gradient-to-bl from-brand-400 to-brand-200 backdrop-blur-lg h-full w-[80%] flex flex-col justify-between p-10"
               initial={{ x: "100vw" }}
               animate={{ x: 0 }}
               transition={{ ease: "easeInOut", duration: 0.2, delay: 0.2 }}
@@ -186,21 +188,23 @@ export default function Header() {
                   />
                 </motion.span>
               </div>
-              <ul className="gap-8 list-decimal text-brand-500 flex flex-col items-center">
+              <ul className="gap-8 text-white flex flex-col items-center">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-brand-500 transition duration-300"
+                      className="text-white hover:text-brand-500 transition duration-300"
                     >
                       {link.title}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <button className="border-[1px] border-brand-500 text-brand-500 px-8 py-2 rounded-sm">
-                Resume
-              </button>
+              <Link href={"reservation"}>
+                <button className="border-[1px] border-brand-500 text-brand-500 px-8 py-2 rounded-sm">
+                  Make Reservation
+                </button>
+              </Link>
             </motion.div>
           </motion.div>
         )}

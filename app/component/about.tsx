@@ -3,6 +3,7 @@ import Image from "next/image";
 import image from "@/public/images/illustration/Kitchen.png";
 import underline from "@/public/images/heading-main-design.svg";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const button = {
   hidden: {
@@ -28,12 +29,12 @@ const button = {
 export default function About() {
   return (
     <section className="my-20 text-brand-800">
-      <div className="container mx-auto p-4">
-        <div className="grid grid-cols-5 gap-10">
-          <div className="flex col-span-2 items-center justify-center">
+      <div className="container mx-auto px-10">
+        <div className="md:grid grid-cols-1 md:grid-cols-5 gap-10">
+          <div className="flex md:col-span-2">
             <Image src={image} alt="Wheel" width={400} height={200} />
           </div>
-          <div className="flex flex-col col-span-3 gap-10">
+          <div className="flex flex-col col-span-3 gap-10 mt-10 md:mt-0">
             <div className="flex flex-col gap-2">
               <h1 className="text-title text-3xl font-semibold">Our Story</h1>
               <Image src={underline} alt="underline" />
@@ -51,19 +52,21 @@ export default function About() {
               grown up with and held dear.
             </p>
             <div>
-              <motion.button
-                className="border-[1px] border-brand-700 font-title text-brand-700 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm"
-                variants={button}
-                initial="hidden"
-                animate="show"
-                whileHover={{
-                  scale: 1.1,
-                  transition: { type: "spring", stiffness: 400, damping: 10 },
-                }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Read more
-              </motion.button>
+              <Link href="/who-we-are">
+                <motion.button
+                  className="border-[1px] border-brand-700 font-title text-brand-700 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm"
+                  variants={button}
+                  initial="hidden"
+                  animate="show"
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { type: "spring", stiffness: 400, damping: 10 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Read more
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>

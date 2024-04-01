@@ -3,7 +3,7 @@ import * as food from "./illustrations";
 
 export default function Items() {
   return (
-    <div className="py-8 px-10">
+    <div className="py-8 px-10 hidden md:flex">
       <div className="flex">
         <div className="flex flex-col gap-1 justify-center items-center">
           <div>

@@ -3,9 +3,9 @@ import QuickLinks from "./quick-links";
 export default function WhoContent() {
   return (
     <section className="my-20">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-12 gap-16">
-          <div className="col-span-9 flex flex-col gap-4">
+      <div className="container mx-auto px-10">
+        <div className="grid md:grid-cols-12 gap-16">
+          <div className="md:col-span-9 flex flex-col gap-4">
             <p>
               Annapurna emerges from a deep-rooted commitment to serve our
               cherished culinary traditions with a touch of elegance. Our
@@ -33,7 +33,7 @@ export default function WhoContent() {
               blending tradition with a modern twist.
             </p>
           </div>
-          <div className="col-span-3">
+          <div className="hidden md:flex col-span-3">
             <QuickLinks />
           </div>
         </div>

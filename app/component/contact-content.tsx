@@ -31,9 +31,9 @@ const button = {
 export default function ContactContent() {
   return (
     <section className="my-20">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-12 gap-16">
-          <div className="col-span-9 flex flex-col gap-4">
+      <div className="container mx-auto px-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
+          <div className="md:col-span-9 flex flex-col gap-4">
             <p>Please Fill the form below to get in touch with us</p>
             <form className="grid grid-cols-1 gap-6">
               <div className="flex flex-col gap-4">
@@ -117,7 +117,7 @@ export default function ContactContent() {
               </div>
             </div>
           </div>
-          <div className="col-span-3">
+          <div className="hidden md:flex col-span-3">
             <QuickLinks />
           </div>
         </div>

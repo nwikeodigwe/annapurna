@@ -55,7 +55,7 @@ const button = {
 export default function Hero() {
   return (
     <section className="h-3/4 md:h-screen flex flex-col md:justify-center p-10 md:p-0 bg-gradient-to-bl from-brand-400 to-brand-200 backdrop-blur-lg relative">
-      <div className="absolute top-0 right-16">
+      <div className="absolute hidden md:flex top-0 right-16">
         <Image src={illustration} alt="logo" className="" />
       </div>
       <motion.div
@@ -91,7 +91,7 @@ export default function Hero() {
           cuisine
         </motion.p>
         <div>
-          <Link href="mailto:nwikeodigwe@outlook.com">
+          <Link href="/menu">
             <motion.button
               className="border-[1px] border-brand-700 font-title text-brand-700 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm"
               variants={button}
