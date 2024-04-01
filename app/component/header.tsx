@@ -17,8 +17,8 @@ const navLinks = [
     title: "Who We Are",
   },
   {
-    href: "/location",
-    title: "Location",
+    href: "/menu",
+    title: "Menu",
   },
   {
     href: "/contact",
@@ -148,7 +148,7 @@ export default function Header() {
               ))}
             </motion.ul>
 
-            <Link href={"/make-reservation"}>
+            <Link href={"/reservation"}>
               <motion.button
                 className="border-[1px] border-brand-500 font-title text-brand-500 px-5 py-3 rounded-sm"
                 variants={button}

@@ -7,23 +7,24 @@ import Image from "next/image";
 
 const navLinks = [
   {
-    href: "#home",
+    href: "/",
     title: "Home",
   },
+
   {
-    href: "#about",
-    title: "About Us",
-  },
-  {
-    href: "#whoweare",
+    href: "/who-we-are",
     title: "Who We Are",
   },
   {
-    href: "#location",
+    href: "/location",
     title: "Location",
   },
   {
-    href: "#contact",
+    href: "/reservation",
+    title: "Reservation",
+  },
+  {
+    href: "/contact",
     title: "Contact",
   },
 ];
