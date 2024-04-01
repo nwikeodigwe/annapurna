@@ -47,13 +47,13 @@ export default function Jumbotron({ title, subtitle }: Props) {
         animate="show"
       >
         <motion.h1
-          className="text-3xl md:text-6xl font-title font-bold text-brand-800 "
+          className="text-3xl  font-title font-bold text-brand-800 "
           variants={children}
         >
           {title}
         </motion.h1>
         <motion.h2
-          className="text-2xl md:text-4xl text-zinc-100 font-bold "
+          className="text-2xl text-zinc-100 font-bold "
           variants={children}
         >
           {subtitle}

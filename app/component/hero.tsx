@@ -86,9 +86,9 @@ export default function Hero() {
           className="text-sm md:text-md text-zinc-100 md:w-2/3"
           variants={children}
         >
-          Here at Sharma, we ensure quality, customer satisfaction and variety;
-          providing a range of Indian cuisine as well as a range of Arabic
-          cuisine
+          Here at Annapurna, we ensure quality, customer satisfaction and
+          variety; providing a range of Indian cuisine as well as a range of
+          Arabic cuisine
         </motion.p>
         <div>
           <Link href="/menu">

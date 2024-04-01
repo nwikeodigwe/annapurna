@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sans.className} bg-brand-50`}>
+    <html lang="en" className={`${sans.className} bg-brand-50 text-brand-800`}>
       <body>{children}</body>
     </html>
   );
