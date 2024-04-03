@@ -107,8 +107,8 @@ export default function Header() {
   const path = usePathname();
   return (
     <>
-      <header className="font-mono text-sm static top-10 left-10">
-        <div className="flex px-10 items-center justify-between text-brand-50 py-5 shadow-2xl shadow-brand-900 z-10">
+      <header className="font-mono text-sm fixed top-0 left-0 bg-brand-900 w-full shadow-2xl shadow-brand-900 z-10">
+        <div className="flex px-10 items-center justify-between text-brand-50 py-5">
           <motion.div variants={logo_variant} initial="hidden" animate="show">
             <Link href={"/"}>
               <Image src={logo} alt="logo" className="w-36 h-16" />

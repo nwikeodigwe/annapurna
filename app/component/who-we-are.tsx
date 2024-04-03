@@ -3,7 +3,7 @@ import QuickLinks from "./quick-links";
 export default function WhoContent() {
   return (
     <section className="my-20">
-      <div className="container mx-auto px-10 text-brand-50">
+      <div className="container md:max-w-screen-lg mx-auto px-10 text-brand-50">
         <div className="grid md:grid-cols-12 gap-16">
           <div className="md:col-span-9 flex flex-col gap-4">
             <p>

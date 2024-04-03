@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function MenuContent() {
   return (
     <section className="my-28">
-      <div className="container mx-auto px-10">
+      <div className="container md:max-w-screen-lg mx-auto px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-center">
           <div>
             <Image src={menuOne} alt="menuOne" />

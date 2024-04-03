@@ -29,7 +29,7 @@ const button = {
 export default function About() {
   return (
     <section className="my-20 text-brand-800">
-      <div className="container mx-auto px-10">
+      <div className="container mx-auto md:max-w-screen-lg px-10">
         <div className="md:grid grid-cols-1 md:grid-cols-5 gap-10">
           <div className="flex md:col-span-2">
             <Image src={image} alt="Wheel" width={400} height={200} />

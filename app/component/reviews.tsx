@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Reviews() {
   return (
     <section className="my-20">
-      <div className="container mx-auto flex flex-col items-center justify-center gap-10 p-10 md:p-0 text-brand-50">
+      <div className="container md:max-w-screen-lg mx-auto flex flex-col items-center justify-center gap-10 p-10 md:p-0 text-brand-50">
         <div className="flex flex-col items-center gap-3">
           <h1 className="text-title text-3xl font-semibold">Reviews</h1>
           <Image src={underline} alt="underline" />

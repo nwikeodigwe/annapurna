@@ -54,12 +54,12 @@ const button = {
 
 export default function Hero() {
   return (
-    <section className="h-3/4 md:h-screen flex flex-col md:justify-center p-10 md:p-0 bg-gradient-to-bl from-brand-500 to-brand-700 backdrop-blur-lg relative">
-      <div className="absolute hidden md:flex top-0 right-16">
+    <section className="h-3/4 md:h-screen flex flex-col md:justify-center p-10 md:p-10 bg-gradient-to-bl from-brand-500 to-brand-700 backdrop-blur-lg relative">
+      <div className="absolute hidden md:flex top-10 right-16">
         <Image src={illustration} alt="logo" className="" />
       </div>
       <motion.div
-        className="container flex flex-col mx-auto gap-4"
+        className="container md:max-w-screen-lg flex flex-col mx-auto gap-4"
         variants={container}
         initial="hidden"
         animate="show"
