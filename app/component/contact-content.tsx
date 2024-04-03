@@ -31,7 +31,7 @@ const button = {
 export default function ContactContent() {
   return (
     <section className="my-20">
-      <div className="container mx-auto px-10 text-brand-50">
+      <div className="container md:max-w-screen-lg mx-auto px-10 text-brand-50">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-9 flex flex-col gap-4">
             <p>Please Fill the form below to get in touch with us</p>
