@@ -36,7 +36,7 @@ const container = {
 
 export default function Jumbotron({ title, subtitle }: Props) {
   return (
-    <section className="min-h-[50vh] flex flex-col justify-end md:p-0 bg-gradient-to-bl from-brand-500 to-brand-800 backdrop-blur-lg relative">
+    <section className="min-h-[45vh] md:min-h-[50vh] flex flex-col justify-end md:p-0 bg-gradient-to-bl from-brand-500 to-brand-800 backdrop-blur-lg relative">
       {/* <div className="absolute top-0 right-16">
         <Image src={image} alt="logo" className="" />
       </div> */}
