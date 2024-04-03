@@ -107,7 +107,7 @@ export default function ContactContent() {
                     href={"mailto:support@annapurna-tiffins.com"}
                     className="hover:underline transition duration-300"
                   >
-                    support@annapurna-tiffins.com
+                    order@annapurna-tiffins.com
                   </Link>
                 </p>
               </div>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import logo from "@/public/logo.png";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   {
@@ -102,7 +103,8 @@ const logo_variant = {
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+
+  const path = usePathname();
   return (
     <>
       <header className="font-mono text-sm static top-0 left-0">
@@ -138,7 +140,11 @@ export default function Header() {
                 >
                   <Link
                     href={link.href}
-                    className="hover:text-brand-500 transition duration-300"
+                    className={`${
+                      path === link.href
+                        ? "text-brand-500"
+                        : "hover:text-brand-500"
+                    } transition duration-300`}
                   >
                     {link.title}
                   </Link>
