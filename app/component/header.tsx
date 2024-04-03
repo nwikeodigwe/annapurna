@@ -173,7 +173,7 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              className="bg-gradient-to-bl from-brand-400 to-brand-200 backdrop-blur-lg h-full w-[80%] flex flex-col justify-between p-10"
+              className="bg-gradient-to-bl from-brand-900 to-brand-700 backdrop-blur-lg h-full w-[80%] flex flex-col justify-between p-10"
               initial={{ x: "100vw" }}
               animate={{ x: 0 }}
               transition={{ ease: "easeInOut", duration: 0.2, delay: 0.2 }}
@@ -185,26 +185,26 @@ export default function Header() {
                   transition={{ duration: 0.5 }}
                 >
                   <RxCross1
-                    className="text-3xl text-brand-500 cursor-pointer"
+                    className="text-3xl text-brand-50 cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   />
                 </motion.span>
               </div>
-              <ul className="gap-8 text-white flex flex-col items-center">
+              <ul className="gap-8 text-brand-50 flex flex-col items-center">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-white hover:text-brand-500 transition duration-300"
+                      className="text-brand-50 hover:text-brand-500 transition duration-300"
                     >
                       {link.title}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <Link href={"reservation"}>
+              <Link href={"/contact"}>
                 <button className="border-[1px] border-brand-500 text-brand-500 px-8 py-2 rounded-sm">
-                  Make Reservation
+                  Contact us
                 </button>
               </Link>
             </motion.div>

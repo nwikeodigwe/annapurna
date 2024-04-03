@@ -54,12 +54,12 @@ const button = {
 
 export default function Hero() {
   return (
-    <section className="h-3/4 md:h-screen flex flex-col md:justify-center p-10 md:p-10 bg-gradient-to-bl from-brand-500 to-brand-700 backdrop-blur-lg relative">
+    <section className="min-h-screen flex flex-col md:justify-center p-10 bg-gradient-to-bl from-brand-500 to-brand-700 backdrop-blur-lg relative">
       <div className="absolute hidden md:flex top-10 right-16">
         <Image src={illustration} alt="logo" className="" />
       </div>
       <motion.div
-        className="container md:max-w-screen-lg flex flex-col mx-auto gap-4"
+        className="container md:max-w-screen-lg pt-28 md:pt-10 flex flex-col mx-auto gap-4"
         variants={container}
         initial="hidden"
         animate="show"
@@ -71,19 +71,19 @@ export default function Hero() {
           Why people choose us as their go to?
         </motion.p>
         <motion.h1
-          className="text-4xl md:text-3xl font-title font-bold text-zinc-100"
+          className="text-2xl md:text-3xl font-title font-bold text-zinc-100"
           variants={children}
         >
           Prepare for first-class service
         </motion.h1>
         <motion.h2
-          className="text-4xl md:text-2xl text-zinc-100 font-title font-bold md:w-2/3"
+          className="text-xl md:text-2xl text-zinc-100 font-title font-bold md:w-2/3"
           variants={children}
         >
           Annapurna is the perfect place to order all your favourite Indian food
         </motion.h2>
         <motion.p
-          className="text-sm md:text-md text-zinc-100 md:w-2/3"
+          className="text-md font-light md:text-md text-zinc-100 md:w-2/3"
           variants={children}
         >
           Here at Annapurna, we ensure quality, customer satisfaction and
