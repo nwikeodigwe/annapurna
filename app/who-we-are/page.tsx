@@ -14,7 +14,7 @@ export default function WhoWeAre() {
         subtitle="We pride ourself on quality"
       />
       <WhoContent />
-      <Brands />
+      {/* <Brands /> */}
       <Footer />
     </>
   );

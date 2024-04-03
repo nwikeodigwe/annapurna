@@ -28,9 +28,9 @@ const button = {
 export default function Reservation() {
   return (
     <section className="my-20">
-      <div className="container mx-auto bg-gradient-to-l from-brand-400 to-brand-200 backdrop-blur-lg relative p-4 rounded-sm">
+      <div className="container mx-auto bg-gradient-to-l from-brand-600 to-brand-800 backdrop-blur-lg relative p-4 rounded-sm">
         <div className="grid md:grid-cols-5">
-          <div className="flex flex-col gap-4 items-center justify-center md:col-span-3 p-4">
+          <div className="flex flex-col gap-4 items-center justify-center md:col-span-3 p-4 text-brand-50">
             <h2 className="text-xl font-title font-semibold text-center">
               Reservation
             </h2>
@@ -40,7 +40,7 @@ export default function Reservation() {
             </p>
             <Link href="tel:901836365">
               <motion.button
-                className="border-[1px] border-brand-700 font-title text-brand-700 text-sm px-8 py-3 md:px-10 md:py-4 rounded-full"
+                className="border-[1px] border-brand-60 font-title text-brand-50 text-sm px-8 py-3 md:px-10 md:py-4 rounded-full"
                 variants={button}
                 initial="hidden"
                 animate="show"

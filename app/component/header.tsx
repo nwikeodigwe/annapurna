@@ -20,10 +20,6 @@ const navLinks = [
     href: "/menu",
     title: "Menu",
   },
-  {
-    href: "/contact",
-    title: "Contact",
-  },
 ];
 
 const container = {
@@ -109,8 +105,8 @@ export default function Header() {
   console.log(isOpen);
   return (
     <>
-      <header className="py-5 font-mono text-sm static top-0 left-0 bg-brand-50">
-        <div className="flex px-10 items-center justify-between">
+      <header className="font-mono text-sm static top-0 left-0">
+        <div className="flex px-10 items-center justify-between text-brand-50 py-5 shadow-2xl">
           <motion.div variants={logo_variant} initial="hidden" animate="show">
             <Link href={"/"}>
               <Image src={logo} alt="logo" className="w-36 h-16" />
@@ -118,7 +114,7 @@ export default function Header() {
           </motion.div>
           <div>
             <HiOutlineMenuAlt1
-              className="text-3xl text-brand-500 md:hidden"
+              className="text-3xl md:hidden"
               onClick={() => setIsOpen(true)}
             />
           </div>
@@ -150,7 +146,7 @@ export default function Header() {
               ))}
             </motion.ul>
 
-            <Link href={"/reservation"}>
+            <Link href={"/contact"}>
               <motion.button
                 className="border-[1px] border-brand-500 font-title text-brand-500 px-5 py-3 rounded-sm"
                 variants={button}
@@ -158,7 +154,7 @@ export default function Header() {
                 animate="show"
                 whileHover="hover"
               >
-                Make Reservation
+                Contact Us
               </motion.button>
             </Link>
           </div>

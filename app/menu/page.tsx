@@ -10,7 +10,7 @@ export default function Menu() {
       <Header />
       <Jumbotron title="Menu" subtitle="Our menu is the best in town" />
       <MenuContent />
-      <Brands />
+      {/* <Brands /> */}
       <Footer />
     </>
   );

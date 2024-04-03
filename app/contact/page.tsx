@@ -13,7 +13,7 @@ export default function Contact() {
         subtitle="Feel free to ask queries about your concerns."
       />
       <ContactContent />
-      <Brands />
+      {/* <Brands /> */}
       <Footer />
     </>
   );

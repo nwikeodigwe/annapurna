@@ -31,7 +31,7 @@ const button = {
 export default function ContactContent() {
   return (
     <section className="my-20">
-      <div className="container mx-auto px-10">
+      <div className="container mx-auto px-10 text-brand-50">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-9 flex flex-col gap-4">
             <p>Please Fill the form below to get in touch with us</p>
@@ -42,7 +42,7 @@ export default function ContactContent() {
                   type="text"
                   name="name"
                   id="name"
-                  className="border-[1px] border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
+                  className="border-[1px] border-gray-300 bg-brand-50  rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
                   placeholder="Enter your full name"
                   required
                 />
@@ -53,7 +53,7 @@ export default function ContactContent() {
                   type="text"
                   name="name"
                   id="name"
-                  className="border-[1px] border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
+                  className="border-[1px] border-gray-300 bg-brand-50  rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
                   placeholder="Enter Email Address"
                   required
                 />
@@ -64,7 +64,7 @@ export default function ContactContent() {
                   type="text"
                   name="name"
                   id="name"
-                  className="border-[1px] border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
+                  className="border-[1px] border-gray-300 bg-brand-50  rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
                   placeholder="Enter Phone Number"
                   required
                 />
@@ -74,14 +74,14 @@ export default function ContactContent() {
                 <textarea
                   name="message"
                   id="name"
-                  className=" resize-none h-32 border-[1px] border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
+                  className="resize-none h-32 border-[1px] bg-brand-50 border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
                   placeholder="Enter your full name"
                   required
                 ></textarea>
               </div>
               <div>
                 <motion.button
-                  className="border-[1px] border-brand-700 font-title text-brand-700 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm flex items-center justify-center"
+                  className="border-[1px] border-brand-50 font-title text-brand-50 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm flex items-center justify-center"
                   variants={button}
                   initial="hidden"
                   animate="show"

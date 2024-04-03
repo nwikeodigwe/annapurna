@@ -3,15 +3,17 @@ import Link from "next/link";
 export default function QuickLinks() {
   return (
     <div>
-      <h1 className="font-title text-3xl font-semibold">Quick Links</h1>
+      <h1 className="font-title text-3xl font-semibold text-brand-200">
+        Quick Links
+      </h1>
       <ul className="flex flex-col gap-3 mt-4">
         <li>
-          <Link
+          {/* <Link
             href="/reservation"
             className="hover:underline transition duration-300"
           >
             Make A reservation
-          </Link>
+          </Link> */}
         </li>
         <li>
           <Link

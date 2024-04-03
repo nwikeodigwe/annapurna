@@ -15,14 +15,7 @@ const navLinks = [
     href: "/who-we-are",
     title: "Who We Are",
   },
-  {
-    href: "/location",
-    title: "Location",
-  },
-  {
-    href: "/reservation",
-    title: "Reservation",
-  },
+
   {
     href: "/contact",
     title: "Contact",
@@ -51,7 +44,7 @@ export default function Footer() {
           <Image src={logo} alt="logo" className="w-40 h-24" />
         </div>
         <div className="flex justify-center">
-          <ul className="grid grid-cols-1 md:grid-cols-5 gap-5 justify-between uppercase text-md font-title font-bold">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-5 justify-between uppercase text-md font-title font-bold">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href}>{link.title}</Link>

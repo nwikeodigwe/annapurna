@@ -18,7 +18,7 @@ export default function Home() {
       <Reservation />
       <Gallery />
       <Reviews />
-      <Brands />
+      {/* <Brands /> */}
       <Footer />
     </>
   );

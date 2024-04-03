@@ -34,7 +34,7 @@ export default function About() {
           <div className="flex md:col-span-2">
             <Image src={image} alt="Wheel" width={400} height={200} />
           </div>
-          <div className="flex flex-col col-span-3 gap-10 mt-10 md:mt-0">
+          <div className="flex flex-col col-span-3 gap-10 mt-10 md:mt-0 text-brand-50">
             <div className="flex flex-col gap-2">
               <h1 className="text-title text-3xl font-semibold">Our Story</h1>
               <Image src={underline} alt="underline" />
@@ -54,7 +54,7 @@ export default function About() {
             <div>
               <Link href="/who-we-are">
                 <motion.button
-                  className="border-[1px] border-brand-700 font-title text-brand-700 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm"
+                  className="border-[1px] border-brand-50 font-title text-brand-50 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm"
                   variants={button}
                   initial="hidden"
                   animate="show"
