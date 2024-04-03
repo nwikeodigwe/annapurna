@@ -32,13 +32,12 @@ export default function Reservation() {
         <div className="grid md:grid-cols-5">
           <div className="flex flex-col gap-4 items-center justify-center md:col-span-3 p-4 text-brand-50">
             <h2 className="text-xl font-title font-semibold text-center">
-              Reservation
+              Catering
             </h2>
             <p className="text-center">
-              Reserve a spot for you and your loved ones, and take a trip down
-              memory lane, in the most indulgent ways possible.
+              Book a catering service for your event and make it memorable
             </p>
-            <Link href="tel:901836365">
+            <Link href="tel:+13462855562">
               <motion.button
                 className="border-[1px] border-brand-60 font-title text-brand-50 text-sm px-8 py-3 md:px-10 md:py-4 rounded-full"
                 variants={button}

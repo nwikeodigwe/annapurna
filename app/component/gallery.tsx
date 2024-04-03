@@ -23,11 +23,11 @@ export default function Gallery() {
           </h1>
           <Image src={underline} alt="underline" />
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 mt-4 text-brand-50">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-0 mt-4 text-brand-50">
           {images.map((image, index) => (
             <Image key={index} src={image} alt="Gallery" />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
