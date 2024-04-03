@@ -54,7 +54,7 @@ const button = {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col md:justify-center p-10 bg-gradient-to-bl from-brand-500 to-brand-700 backdrop-blur-lg relative">
+    <section className="min-h-screen flex flex-col justify-center p-10 bg-gradient-to-bl from-brand-500 to-brand-700 backdrop-blur-lg relative">
       <div className="absolute hidden md:flex top-10 right-16">
         <Image src={illustration} alt="logo" className="" />
       </div>
