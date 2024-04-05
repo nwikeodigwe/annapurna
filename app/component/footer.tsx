@@ -25,8 +25,8 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className={style.background}>
-      <div className="bg-black/90">
-        <div className="container flex flex-col gap-14 relative mx-auto text-white p-12">
+      <div className="bg-black/80">
+        <div className="container flex flex-col gap-14 relative mx-auto text-brand-50 p-12">
           <div className="absolute top-10 right-16">
             <ul className="flex gap-4">
               <li>
@@ -48,7 +48,12 @@ export default function Footer() {
             <ul className="flex flex-col md:flex-row gap-10 justify-between uppercase text-md font-title font-bold">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.title}</Link>
+                  <Link
+                    href={link.href}
+                    className="hover:text-brand-500 transition duration-300"
+                  >
+                    {link.title}
+                  </Link>
                 </li>
               ))}
             </ul>
