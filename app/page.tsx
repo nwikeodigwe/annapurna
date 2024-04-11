@@ -17,7 +17,7 @@ export default function Home() {
       <About />
       <Reservation />
       <Gallery />
-      <Reviews />
+      {/* <Reviews /> */}
       {/* <Brands /> */}
       <Footer />
     </>
