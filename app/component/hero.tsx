@@ -59,7 +59,7 @@ export default function Hero() {
         <Image src={illustration} alt="logo" className="" />
       </div>
       <motion.div
-        className="container md:max-w-screen-lg pt-28 md:pt-10 flex flex-col mx-auto gap-4"
+        className="container md:max-w-screen-lg pt-28 md:pt-10 flex flex-col mx-auto gap-5 mt-5"
         variants={container}
         initial="hidden"
         animate="show"
@@ -74,21 +74,23 @@ export default function Hero() {
           className="text-2xl md:text-3xl font-title font-bold text-zinc-100"
           variants={children}
         >
-          Prepare for first-class service
+          We take pride in our commitment to quality
         </motion.h1>
-        <motion.h2
+        {/* <motion.h2
           className="text-xl md:text-2xl text-zinc-100 font-title font-bold md:w-2/3"
           variants={children}
         >
           Annapurna is the perfect place to order all your favourite Indian food
-        </motion.h2>
+        </motion.h2> */}
         <motion.p
           className="text-md font-light md:text-md text-zinc-100 md:w-2/3"
           variants={children}
         >
-          Here at Annapurna, we ensure quality, customer satisfaction and
-          variety; providing a range of Indian cuisine as well as a range of
-          Arabic cuisine
+          Annapurna Tiffins serves top-quality South Indian Cuisine with a
+          smile, prioritizing customer satisfaction. Expect exceptional service
+          and delicious Indian dishes whenever you order from us. We&apos;re
+          dedicated to brightening your day with our passion for food and
+          hospitality.
         </motion.p>
         <div>
           <Link href="/menu">

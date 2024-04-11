@@ -2,7 +2,7 @@ import Link from "next/link";
 import style from "../styles.module.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
-import logo from "@/public/logo.png";
+import logo from "@/public/images/round-logo.png";
 import Image from "next/image";
 
 const navLinks = [
@@ -27,7 +27,7 @@ export default function Footer() {
     <footer className={style.background}>
       <div className="bg-black/80">
         <div className="container flex flex-col gap-14 relative mx-auto text-brand-50 p-12">
-          <div className="absolute top-10 right-16">
+          {/* <div className="absolute top-10 right-16">
             <ul className="flex gap-4">
               <li>
                 <Link href="">
@@ -40,9 +40,9 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="flex justify-center">
-            <Image src={logo} alt="logo" className="w-40 h-24" />
+            <Image src={logo} alt="logo" className="w-40 h-40" />
           </div>
           <div className="flex justify-center">
             <ul className="flex flex-col md:flex-row gap-10 justify-between uppercase text-md font-title font-bold">

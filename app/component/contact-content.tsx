@@ -1,11 +1,20 @@
 "use client";
-import QuickLinks from "./quick-links";
+// import QuickLinks from "./quick-links";
 import { motion } from "framer-motion";
 import { BsSend } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
 import Link from "next/link";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useState } from "react";
+
+interface Inputs {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 const button = {
   hidden: {
@@ -29,56 +38,110 @@ const button = {
 };
 
 export default function ContactContent() {
+  const [error, setError] = useState<string>("");
+  const [success, setSuccess] = useState<string>("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    try {
+      fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((response) => {
+        if (response.ok) {
+          console.log(response);
+          setSuccess(
+            "Your message has been sent successfully. We will get back to you soon."
+          );
+        } else {
+          setError("An error occurred. Please try again later.");
+        }
+      });
+    } catch (error) {
+      setError("An error occurred. Please try again later.");
+    }
+  };
   return (
     <section className="my-20">
       <div className="container md:max-w-screen-lg mx-auto px-10 text-brand-50">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
-          <div className="md:col-span-9 flex flex-col gap-4">
+        <div className="">
+          <div className="w-3/4 mx-auto flex flex-col gap-4">
             <p>Please Fill the form below to get in touch with us</p>
-            <form className="grid grid-cols-1 gap-6">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="grid grid-cols-1 gap-6"
+            >
               <div className="flex flex-col gap-4">
                 <label htmlFor="name">Full Name *</label>
                 <input
+                  {...register("name", { required: true })}
                   type="text"
-                  name="name"
-                  id="name"
                   className="border-[1px] border-gray-300 bg-brand-50  rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
                   placeholder="Enter your full name"
-                  required
                 />
+                {errors.name && (
+                  <span className="text-xs italic text-red-600">
+                    Name is required
+                  </span>
+                )}
               </div>
               <div className="flex flex-col gap-4">
                 <label htmlFor="name">Email Address *</label>
                 <input
+                  {...register("email", { required: true })}
                   type="text"
-                  name="name"
-                  id="name"
                   className="border-[1px] border-gray-300 bg-brand-50  rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
                   placeholder="Enter Email Address"
-                  required
                 />
+                {errors.email && (
+                  <span className="text-xs italic text-red-600">
+                    Email address is required
+                  </span>
+                )}
               </div>
               <div className="flex flex-col gap-4">
                 <label htmlFor="name">Phone Number *</label>
                 <input
+                  {...register("phone", { required: true })}
                   type="text"
-                  name="name"
-                  id="name"
                   className="border-[1px] border-gray-300 bg-brand-50  rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
                   placeholder="Enter Phone Number"
-                  required
                 />
+                {errors.phone && (
+                  <span className="text-xs italic text-red-600">
+                    Phone number is required
+                  </span>
+                )}
               </div>
               <div className="flex flex-col gap-4">
                 <label htmlFor="name">Message *</label>
                 <textarea
-                  name="message"
-                  id="name"
-                  className="resize-none h-32 border-[1px] bg-brand-50 border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
-                  placeholder="Enter your full name"
-                  required
+                  {...register("message", { required: true })}
+                  className="resize-none h-32 border-[1px] bg-brand-50 border-gray-300 text-gray-900 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition duration-300 ease-in-out"
+                  placeholder="Message here..."
                 ></textarea>
+                {errors.message && (
+                  <span className="text-xs italic text-red-600">
+                    Message is required
+                  </span>
+                )}
               </div>
+              {error && (
+                <div className="p-3 bg-red-100/85 text-red-600 rounded-sm">
+                  {error}
+                </div>
+              )}
+              {success && (
+                <div className="p-3 bg-green-100/85 text-green-600 rounded-sm">
+                  {success}
+                </div>
+              )}
               <div>
                 <motion.button
                   className="border-[1px] border-brand-50 font-title text-brand-50 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm flex items-center justify-center"
@@ -98,7 +161,7 @@ export default function ContactContent() {
             <div className="flex flex-col gap-4 mt-10">
               <div className="flex gap-4">
                 <CiLocationOn className="text-2xl" />{" "}
-                <p>#4345A, Calder Ave, BeaumontTexas- 77706</p>
+                <p>#4345A, Calder Ave, Beaumont Texas- 77706</p>
               </div>
               <div className="flex gap-4">
                 <MdOutlineAlternateEmail className="text-2xl" />{" "}
@@ -117,9 +180,9 @@ export default function ContactContent() {
               </div>
             </div>
           </div>
-          <div className="hidden md:flex col-span-3">
+          {/* <div className="hidden md:flex col-span-3">
             <QuickLinks />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import Brands from "../component/brands";
+// import Brands from "../component/brands";
 import ContactContent from "../component/contact-content";
 import Footer from "../component/footer";
 import Header from "../component/header";

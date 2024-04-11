@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import reservation from "@/public/images/illustration/reservation.png";
+import reservation from "@/public/images/illustration/Biryani.png";
 
 const button = {
   hidden: {

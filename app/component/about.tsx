@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import image from "@/public/images/illustration/Kitchen.png";
+import image from "@/public/images/illustration/Farming.png";
 import underline from "@/public/images/heading-main-design.svg";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -30,26 +30,28 @@ export default function About() {
   return (
     <section className="my-20 text-brand-800">
       <div className="container mx-auto md:max-w-screen-lg px-10">
-        <div className="md:grid grid-cols-1 md:grid-cols-5 gap-10">
-          <div className="flex md:col-span-2">
+        <div className="md:grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="flex">
             <Image src={image} alt="Wheel" width={400} height={200} />
           </div>
-          <div className="flex flex-col col-span-3 gap-10 mt-10 md:mt-0 text-brand-50">
+          <div className="flex flex-col gap-10 mt-10 md:mt-0 text-brand-50">
             <div className="flex flex-col gap-2">
               <h1 className="text-title text-3xl font-semibold">Our Story</h1>
               <Image src={underline} alt="underline" />
             </div>
 
             <p>
-              Annapurna was born from the deep-rooted desire to share our
-              cherished culinary traditions with everyone, served on a silver
-              platter. Our restaurant offers an array of delectable cuisines
-              that are not only local and authentic but also prepared with an
-              abundance of love. These are dishes that have been cherished
-              and&amp;apos; revered, evoking a sense of nostalgia with every
-              bite. It&apos;s more than just a meal; it&apos;s a journey through
-              the flavors of our heritage, a taste of the memories we&apos;ve
-              grown up with and held dear.
+              Our food cart takes pride in honoring our cherished culinary
+              traditions. We celebrate local authenticity and the flavors that
+              are close to our hearts, with each dish crafted with love and
+              care. With every bite, you savor a piece of nostalgia that has
+              shaped our fondest memories.
+            </p>
+            <p>
+              We pay homage to every aspect of our rich heritage, weaving
+              together the stories of our land and its people. Our goal is to
+              bridge the gap between our hearts and the essence of our
+              motherland.
             </p>
             <div>
               <Link href="/who-we-are">
