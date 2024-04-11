@@ -7,7 +7,7 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import { IoTimeOutline } from "react-icons/io5";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Inputs {
   name: string;
@@ -43,8 +43,12 @@ export default function ContactContent() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    reset,
+    formState,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
+  } = useForm({
+    defaultValues: { name: "", email: "", phone: "", message: "" },
+  });
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     try {
       fetch("/api/email", {
@@ -67,6 +71,14 @@ export default function ContactContent() {
       setError("An error occurred. Please try again later.");
     }
   };
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      setTimeout(() => {
+        setSuccess("");
+      }, 5000);
+      reset();
+    }
+  }, [formState, isSubmitSuccessful, reset]);
   return (
     <section className="my-20">
       <div className="container md:max-w-screen-lg mx-auto px-10 text-brand-50">
@@ -144,7 +156,9 @@ export default function ContactContent() {
               )}
               <div>
                 <motion.button
-                  className="border-[1px] border-brand-50 font-title text-brand-50 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm flex items-center justify-center"
+                  className={`${
+                    isSubmitting ? "disabled" : ""
+                  }border-[1px] border-brand-50 font-title text-brand-50 text-sm px-8 py-3 md:px-10 md:py-4 mt-6 rounded-sm flex items-center justify-center`}
                   variants={button}
                   initial="hidden"
                   animate="show"
